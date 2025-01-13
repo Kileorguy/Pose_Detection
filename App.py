@@ -6,7 +6,6 @@ import mediapipe as mp
 import time
 import pickle
 import math
-# import tensorflow
 
 
 class_data = ['Full Lunge', 'Half Lunge', 'Standing']
@@ -132,7 +131,7 @@ if __name__ == '__main__':
             prev_time = curr_time
             current_fps = 1.0 / elapsed_time if elapsed_time > 0 else 1
 
-            skipped_frames = math.ceil(elapsed_time*1000 / delay) + 1
+            skipped_frames = math.ceil(elapsed_time*1000 / delay) 
             # print(delay/skipped_frames)
             
 
@@ -142,7 +141,7 @@ if __name__ == '__main__':
             cv.imshow('Video', img)
 
 
-            if cv.waitKey(int(delay / skipped_frames)+1) == ord('q'):
+            if cv.waitKey(int(delay / (skipped_frames+1))) == ord('q'):
                 break
 
     cap.release()

@@ -1,5 +1,2 @@
-*.mp4
-*.jpg
-*.jpeg
-*.png
 .env
+*.pkl
