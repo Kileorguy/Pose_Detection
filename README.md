@@ -1,4 +1,11 @@
 # Pose_Detection
+Pose Detection is a project designed to analyze and detect a user's form while performing lunges. The goal is to identify the poses of a "Half Lunge" and a "Full Lunge." This project processes a video input to detect the user's pose.
+
+The dataset was collected manually from a video.
+
+Uses the Python MediaPipe library to annotate the human skeletal structure.
+
+![image.png](https://github.com/Kileorguy/Pose_Detection/blob/main/Documentation/Flow.png?raw=true)
 
 ## Installation
 
@@ -21,9 +28,9 @@ This guide demonstrates how to install the library using Anaconda. Feel free to 
 - Image Augmentation : Enhancing the dataset by generating additional images through flipping, rotating, and stretching. This helps address the issue of a limited original dataset.
 - Landmark Detection : Detecting the human sekeletal structure so it can be trained through SVM. The detail can be seen in the picture below :
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/937b0b22-b87b-4650-916e-b035c9ae2141/8d289e92-7a33-40eb-bced-436eeaca2da8/image.png)
+![image.png](https://github.com/Kileorguy/Pose_Detection/blob/main/Documentation/mediapipe.jpg?raw=true)
 
-In the code, only 23-28 are selected.
+In the code, only 23-28 (Hip, Knee, Angkle) are selected.
 
 - Calculate knee degree : Uses numpy arctan2 formula to calculate the degree of both knee and adding it to the dataset.
 - Convert to CSV
@@ -49,8 +56,7 @@ In the code, only 23-28 are selected.
 This model is not able to predict correctly if the person is standing facing forward because the data mostly consists of a person standing facing to the side, not the front.
 
 ## Application Demo
-<!-- ![Image](https://github.com/Kileorguy/Review_Analyzer_RAG/blob/main/Documentation/Website.png?raw=true)
-[Demo Video Here](https://www.youtube.com/watch?v=qA8o_w6GvJg) -->
-
+![Image](https://github.com/Kileorguy/Pose_Detection/blob/main/Documentation/Demo.png?raw=true)
+[Demo Video Here](https://www.youtube.com/watch?v=0ZwNIq7Bw9I)
 
 
